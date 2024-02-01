@@ -12,7 +12,8 @@ a:hover {
 }
 
 h1 {
-    font-family: sans-serif
+    font-family: sans-serif;
+    color: var(--var)
 }
 
 header {
@@ -24,8 +25,17 @@ h2 {
     font-family: monospace;
 }
 
+:root {
+    --var: green;
+}
+
+body:has(#active:checked) {
+    --var: red;
+}
+
 @media screen and (max-width: 360px) {
     a {
         color: rgb(229, 255, 0);
     }
 }
+/*Hf: checkbox legyen egy gomb */
