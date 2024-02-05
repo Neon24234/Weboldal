@@ -1,47 +1,64 @@
 a {
-    font-size: 30px;
-    margin: 30px;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    transition: font-size 0.5s, font-weight 0.5s;
+  font-size: 30px;
+  margin: 30px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  transition: font-size 0.5s, font-weight 0.5s;
 }
 
 a:hover {
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.burg {
+  font-size: 25px;
+  display: none;
+  cursor: pointer;
+  transform: rotate(0);
+  transition: font-size 0.3s;
+}
+
+.burg:hover {
+  font-size: 35px;
 }
 
 h1 {
-    font-family: sans-serif;
-    color: var(--var)
+  font-family: sans-serif;
+}
+
+.piros {
+  color: var(--var);
 }
 
 header {
-    background-color: black;
-    max-height: 80px;
-    min-height: 80px;
+  background-color: black;
+  max-height: 80px;
+  min-height: 80px;
 }
 
 h2 {
-    text-align: center;
-    font-family: monospace;
+  text-align: center;
+  font-family: monospace;
 }
 
 :root {
-    --var: green;
-    --menu: block
+  --var: green;
 }
 
 body:has(#active:checked) {
-    --var: red;
+  --var: red;
 }
 
-@media screen and (max-width: 360px) {
-    a {
-        color: rgb(229, 255, 0);
-    }
+@media screen and (max-width: 600px) {
+  header {
+    display: none;
+  }
+  .burg {
+    display: block;
+  }
+  a {
+    color: rgb(229, 255, 0);
+  }
 }
-
-
-
