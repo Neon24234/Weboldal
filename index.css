@@ -12,18 +12,6 @@ a:hover {
   cursor: pointer;
 }
 
-.burg {
-  font-size: 25px;
-  display: none;
-  cursor: pointer;
-  transform: rotate(0);
-  transition: font-size 0.3s;
-}
-
-.burg:hover {
-  font-size: 35px;
-}
-
 h1 {
   font-family: sans-serif;
 }
@@ -50,15 +38,44 @@ h2 {
 body:has(#active:checked) {
   --var: red;
 }
+/*Burger Button*/
+.burg {
+  position: relative;
+}
 
+.burgbtn {
+  font-size: 50px;
+  display: none;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  padding: 16px;
+}
+
+.burgcontent {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 160px;
+}
+
+.burg:hover .burgcontent {
+  display: block;
+}
+/*Burger Button end*/
 @media screen and (max-width: 600px) {
   header {
     display: none;
   }
-  .burg {
+  .burgbtn {
     display: block;
   }
   a {
-    color: rgb(229, 255, 0);
+    text-align: center;
+    font-size: 30px;
+    margin: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    transition: font-size 0.5s, font-weight 0.5s;
   }
 }
