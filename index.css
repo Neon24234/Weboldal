@@ -12,6 +12,11 @@ a:hover {
   cursor: pointer;
 }
 
+nav {
+  padding: 20px 0 40px 0;
+  text-align: center;
+}
+
 h1 {
   font-family: sans-serif;
 }
@@ -24,6 +29,8 @@ header {
   background-color: black;
   max-height: 80px;
   min-height: 80px;
+  position: fixed;
+  width: 100%;
 }
 
 h2 {
